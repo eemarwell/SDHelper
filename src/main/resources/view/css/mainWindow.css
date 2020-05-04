@@ -1,0 +1,76 @@
+/* 
+    Created on : 03/04/2020, 09:14:32
+    Author     : Eduardo Marwell
+*/
+.tab-pane:focused > .tab-header-area > .headers-region > .tab:selected .focus-indicator {
+     -fx-border-style: segments(0.166667em, 0.166667em);
+     -fx-border-width: 0;
+     -fx-border-color: -fx-focus-color;
+}
+
+.tab-pane *.tab-header-area *.tab-header-background {
+    -fx-background-color:#003E00;
+}
+
+.tab:selected Tex {
+    -fx-background-color:#FFF;
+    -fx-effect: innershadow(three-pass-box, rgba(0,0,0,0.5), 10, 0, 0, 0);
+}
+
+.tab:selected {
+    -fx-text-fill: #000;
+        -fx-background-color: linear-gradient(#ddd, #fff);
+}
+
+.tab:hover {
+    -fx-background-color:#EEE;
+}
+
+.tab {
+    -fx-background-color:#D0D0D0;
+}
+
+.scrollpane {
+    -fx-background-color:#000;
+}
+
+.dark-blue {
+    -fx-background-color: 
+        rgba(0,0,0,0.08),
+        linear-gradient(#9a9a9a, #909090),
+        linear-gradient(white 0%, #f3f3f3 50%, #ececec 51%, #f2f2f2 100%);
+    -fx-background-insets: 0 0 -1 0,0,1;
+    -fx-background-radius: 5,5,4;
+    -fx-padding: 1 8 1 8;
+    -fx-text-fill: #242d35;
+    -fx-font-size: 13px;
+}
+.dark-blue:hover {
+    -fx-background-color: 
+        rgba(0,0,0,0.08),
+        linear-gradient(#9a9a9a, #f3f3f3),
+        linear-gradient(white 0%, #dedede 80%, #ececec 20%, #f2f2f2 40%);
+    -fx-background-insets: 0 0 -6 0,0,1;
+    -fx-background-radius: 5,5,4;
+    -fx-padding: 1 8 1 8;
+    -fx-text-fill: #000000;
+    -fx-font-size: 13px;
+}
+.dark-blue:pressed {
+    -fx-background-color: 
+        rgba(0,0,0,0.08),
+        linear-gradient(#9a9a9a, #fff),
+        linear-gradient(white 0%, #ececec 50%, #f3f3f3 51%, #f2f2f2 100%);
+    -fx-background-insets: 0 0 -3 0,0,2;
+    -fx-background-radius: 5,5,4;
+    -fx-padding: 1 8 1 8;
+    -fx-text-fill: #000;
+    -fx-font-size: 13px;
+}
+.dark-blue Text {
+    -fx-effect: dropshadow( one-pass-box , black , 0, 0.0 , 0 , -1 );
+}
+
+.dark-blue Text:pressed {
+    -fx-effect: dropshadow( one-pass-box , black , 2, 0.0 , 0 , -3 );
+}

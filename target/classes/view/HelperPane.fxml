@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="helperPane" maxHeight="166.0" maxWidth="352.0" prefHeight="166.0" prefWidth="352.0" style="-fx-background-color: #008000;" stylesheets="@css/mainWindow.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.marwell.sdhelper.controller.HelperPaneController">
+    <children>
+        <Text fill="WHITE" layoutX="9.0" layoutY="24.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ferramentas de Apoio SD">
+          <font>
+            <Font name="Bodoni MT Bold" size="22.0" />
+          </font>
+        </Text>
+        <ScrollPane layoutX="9.0" layoutY="31.0" prefHeight="126.0" prefWidth="336.0" style="-fx-border-color: #0A5500; -fx-background-color: #0A5500;">
+         <content>
+            <VBox minHeight="122.0" minWidth="332.0" style="-fx-background-color: #0A5500;">
+               <children>
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Chat">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Text>
+                  <HBox spacing="6.0" style="-fx-background-color: #0A5500;">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <padding>
+                        <Insets left="4.0" right="4.0" />
+                     </padding>
+                     <children>
+                        <Button fx:id="btnSessaoAberta" styleClass="dark-blue" mnemonicParsing="false" onAction="#sessaoAberta" text="Sessão Aberta" />
+                        <Button fx:id="btnSessaoFechada" styleClass="dark-blue" layoutX="14.0" layoutY="10.0" mnemonicParsing="false" onAction="#sessaoFechada" text="Sessão Fechada" />
+                     </children></HBox>
+               </children>
+               <padding>
+                  <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
+               </padding>
+            </VBox>
+         </content>
+      </ScrollPane>
+    </children>
+</AnchorPane>
