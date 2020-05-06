@@ -13,6 +13,8 @@ public class HibernateUtil {
     public SessionFactory getConnection(){
         Configuration config = new Configuration().configure();
         config.addAnnotatedClass(com.marwell.sdhelper.model.Agente.class);
+        config.addAnnotatedClass(com.marwell.sdhelper.model.Link.class);
+        config.addAnnotatedClass(com.marwell.sdhelper.model.Clipboard.class);
         StandardServiceRegistryBuilder builder = new StandardServiceRegistryBuilder().applySettings(config.getProperties());
         return config.buildSessionFactory(builder.build());
     }
