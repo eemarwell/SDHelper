@@ -1,7 +1,9 @@
 package com.marwell.sdhelper;
 
 import com.marwell.sdhelper.dao.AgenteDAO;
+import com.marwell.sdhelper.dao.ClipboardDAO;
 import com.marwell.sdhelper.model.Agente;
+import com.marwell.sdhelper.model.Clipboard;
 import com.marwell.sdhelper.utils.GerenciadorStage;
 import com.marwell.sdhelper.utils.VerificaChatTimer;
 import javafx.application.Application;
@@ -32,7 +34,7 @@ public class Main extends Application {
 
 		new VerificaChatTimer().executarTimer();
 
-		Agente user = new Agente(1, "Eduardo", "123456", false, true);
+/*		Agente user = new Agente(1, "Eduardo", "123456", false, true);
 		Agente user1 = new Agente(0, "Daniel", "123121", true, false);
 		user.setId(1L);
         AgenteDAO dao = new AgenteDAO();
@@ -44,7 +46,21 @@ public class Main extends Application {
 		users.forEach(u-> {
 		    System.out.println(u.getName());
 		});
-		System.out.println(users.size());
+		System.out.println(users.size());*/
+
+		//Clipboard
+//        Clipboard clip1 = new Clipboard();
+        ClipboardDAO daoclip1 = new ClipboardDAO();
+//        clip1.setId(3L);
+//        daoclip1.add(clip1);
+
+
+        List<Clipboard> users = daoclip1.buscaClipboards(Clipboard.class);
+        users.forEach(u-> {
+            System.out.println(u.getClipboardString());
+        });
+        System.out.println(users.size());
+
 	}
 
 	public static void main(String[] args) {
