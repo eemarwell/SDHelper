@@ -69,9 +69,9 @@ public class LinkDAO {
         }
     }
     
-    public List<Agente> buscaBacklog (Link link) {
-        String query = "from Link link where link";
-        List<Agente> retorno = session.createQuery(query).list();
+    public List<Link> buscaBacklog (Link link) {
+        String query = "from Link link";
+        List<Link> retorno = session.createQuery(query).list();
         transaction.commit();
         return retorno;
     }
