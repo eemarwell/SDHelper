@@ -10,6 +10,10 @@ import javax.persistence.*;
 @Table(name="link")
 public class Link {
 
+    public Link (String linkString){
+        this.linkString = linkString;
+    }
+
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
     @Column(name="id")
