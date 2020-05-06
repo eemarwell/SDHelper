@@ -1,6 +1,7 @@
 package com.marwell.sdhelper.model;
 
 import javax.persistence.*;
+import javax.sound.sampled.Clip;
 
 /**
  *
@@ -10,13 +11,21 @@ import javax.persistence.*;
 @Table(name="clipboard")
 public class Clipboard {
 
+    public Clipboard (){
+
+    }
+
+    public Clipboard (String clipboardString){
+        this.clipboardString = clipboardString;
+    }
+
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
     @Column(name="id")
     private Long id;
 
     @Column(name="clipboardString")
-    private String cliboardString;
+    private String clipboardString;
 
     public Long getId() {
         return id;
@@ -26,12 +35,12 @@ public class Clipboard {
         this.id = id;
     }
 
-    public String getCliboardString() {
-        return cliboardString;
+    public String getClipboardString() {
+        return clipboardString;
     }
 
-    public void setCliboardString(String cliboardString) {
-        this.cliboardString = cliboardString;
+    public void getClipboardString(String clipboardString) {
+        this.clipboardString = clipboardString;
     }
 
 }
