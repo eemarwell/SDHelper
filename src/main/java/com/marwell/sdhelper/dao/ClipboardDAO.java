@@ -1,13 +1,13 @@
 package com.marwell.sdhelper.dao;
 
 import com.marwell.sdhelper.ConnectionFactory.HibernateUtil;
-import com.marwell.sdhelper.model.Agente;
 import com.marwell.sdhelper.model.Clipboard;
-import com.marwell.sdhelper.model.Link;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 
+import javax.persistence.criteria.CriteriaBuilder;
+import javax.persistence.criteria.CriteriaQuery;
 import java.util.List;
 
 /**
@@ -70,10 +70,18 @@ public class ClipboardDAO {
         }
     }
     
-    public List<Agente> buscaLink (Link link) {
-        String query = "from Agente clipboard where agente.backlog = true";
-        List<Agente> retorno = session.createQuery(query).list();
+    public List<Clipboard> buscaClipboard (Clipboard clipboard) {
+        String query = "from Clipboard clipboard";
+        List<Clipboard> retorno = session.createQuery(query).list();
         transaction.commit();
         return retorno;
+    }
+
+    public <T> List<T> buscaClipboards(Class<T> type) {
+        CriteriaBuilder builder = session.getCriteriaBuilder();
+        CriteriaQuery<T> criteria = builder.createQuery(type);
+        criteria.from(type);
+        List<T> data = session.createQuery(criteria).getResultList();
+        return data;
     }
 }
