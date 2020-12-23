@@ -32,7 +32,7 @@ public class Main extends Application {
 		setPrimaryStage(stage);
 		pStage = stage;
 
-		new VerificaChatTimer().executarTimer();
+		//new VerificaChatTimer().executarTimer();
 
 /*		Agente user = new Agente(1, "Eduardo", "123456", false, true);
 		Agente user1 = new Agente(0, "Daniel", "123121", true, false);

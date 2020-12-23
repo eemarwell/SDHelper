@@ -24,7 +24,7 @@ public class ClipboardUtil {
     
     public static boolean copiaBotao(Button button, Long waitTime, String originalText) {
         if (threadsAtivas > 0) {
-            button.setText("Aguarde!");
+            button.setText("AGUARDE");
             button.setDisable(true);
             Task<Void> timer = new Task<Void>() {
                 @Override
@@ -44,7 +44,7 @@ public class ClipboardUtil {
             return false;
         } else {
             threadsAtivas = 1;
-            button.setText("Copiado!");
+            button.setText("COPIADO");
             button.setDisable(true);
             Task<Void> timer = new Task<Void>() {
                 @Override

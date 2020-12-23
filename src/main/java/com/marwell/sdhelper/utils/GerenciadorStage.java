@@ -40,12 +40,12 @@ public final class GerenciadorStage {
         
         stage.focusedProperty().addListener((event)->{
             if (stage.focusedProperty().getValue()) {
-                System.out.println("Mouse sobre");
+                System.out.println("GerenciadorStage - focused");
                 stage.setWidth(originalWidth);
                 stage.setHeight(originalHeight);
                 stage.setOpacity(originalOpacity);
             } else {                             
-                System.out.println("Mouse fora");
+                System.out.println("GerenciadorStage - defocused");
                 stage.setWidth(calculaLogoWidth());
                 stage.setHeight(calculaLogoHeigh());
                 stage.setOpacity(originalOpacity - 0.3);
