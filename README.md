@@ -1,5 +1,6 @@
 Java SDHelper
 =============
+![Java CI with Maven](https://github.com/eemarwell/SDHelper/workflows/Java%20CI%20with%20Maven/badge.svg?branch=master)
 
 O Java SDHelper foi desenvolvido para auxiliar e melhorar o fluxo de trabalho para atendentes do Service Desk Unisys, dentro do Projeto Heineken. Projeto fechado inicialmente para desenvolvimento do sistema especificamente para o projeto Heineken, após ser desenvolvido e criado de forma específica, será distribuído como código aberto.
 
