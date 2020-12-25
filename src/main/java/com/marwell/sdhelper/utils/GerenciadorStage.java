@@ -2,6 +2,9 @@ package com.marwell.sdhelper.utils;
 
 import com.marwell.sdhelper.controller.MainWindowController;
 import java.io.IOException;
+import java.util.Locale;
+import java.util.ResourceBundle;
+
 import javafx.fxml.FXMLLoader;
 import javafx.geometry.Rectangle2D;
 import javafx.scene.Parent;
@@ -14,15 +17,20 @@ import javafx.stage.StageStyle;
  *
  * @author Eduardo Marwell
  */
+
 public final class GerenciadorStage {
     MainWindowController main = new MainWindowController();
     public double originalHeight = 240;
     public double originalWidth = 364;
     public double originalOpacity = 0.90;
+    Locale locale;
+    FXMLLoader fxmlLoader = new FXMLLoader();
 
     public GerenciadorStage(Stage stage,String title, String view) throws IOException {
         Rectangle2D primaryScreenBounds = Screen.getPrimary().getVisualBounds();
+        localeConfiguration();
         Parent root = FXMLLoader.load(getClass().getResource("/view/" +view));
+
         Scene scene = new Scene(root);
         
         stage.initStyle(StageStyle.TRANSPARENT);
@@ -64,5 +72,19 @@ public final class GerenciadorStage {
         double margin = 8.0;
         double heighMinimizado = main.heightLogo + margin;
         return heighMinimizado;
+    }
+
+    public void localeConfiguration (){
+
+        Locale localeEN = new Locale("en", "US");
+        Locale localePT = new Locale("pt", "BR");
+        Locale currentLocale = Locale.getDefault();
+        if (currentLocale == localeEN){
+            Locale.setDefault(localeEN);
+            locale = localeEN;
+        } else {
+            Locale.setDefault(localePT);
+            locale = localePT;
+        }
     }
 }
