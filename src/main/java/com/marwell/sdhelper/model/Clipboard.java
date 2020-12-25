@@ -1,46 +1,32 @@
 package com.marwell.sdhelper.model;
 
+import lombok.*;
+import lombok.extern.slf4j.Slf4j;
+
 import javax.persistence.*;
-import javax.sound.sampled.Clip;
 
 /**
  *
  * @author Eduardo Marwell
  */
+
 @Entity
 @Table(name="clipboard")
+@AllArgsConstructor
+@ToString(exclude="id")
+@Slf4j
 public class Clipboard {
-
-    public Clipboard (){
-
-    }
-
-    public Clipboard (String clipboardString){
-        this.clipboardString = clipboardString;
-    }
 
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
     @Column(name="id")
+    @Getter
+    @NonNull
     private Long id;
 
+    @Getter
+    @Setter
     @Column(name="clipboardString")
     private String clipboardString;
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getClipboardString() {
-        return clipboardString;
-    }
-
-    public void getClipboardString(String clipboardString) {
-        this.clipboardString = clipboardString;
-    }
 
 }

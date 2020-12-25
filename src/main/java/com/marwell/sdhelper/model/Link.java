@@ -1,40 +1,31 @@
 package com.marwell.sdhelper.model;
 
+import lombok.*;
+import lombok.extern.slf4j.Slf4j;
+
 import javax.persistence.*;
 
 /**
  *
  * @author Eduardo Marwell
  */
+
 @Entity
 @Table(name="link")
+@AllArgsConstructor
+@ToString(exclude="id")
+@Slf4j
 public class Link {
-
-    public Link (String linkString){
-        this.linkString = linkString;
-    }
 
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
     @Column(name="id")
+    @Getter
+    @NonNull
     private Long id;
 
+    @Getter
+    @Setter
     @Column(name="linkString")
     private String linkString;
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getLinkString() {
-        return linkString;
-    }
-
-    public void setLinkString(String linkString) {
-        this.linkString = linkString;
-    }
 }
