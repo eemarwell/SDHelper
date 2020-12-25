@@ -13,6 +13,8 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import java.util.List;
+import java.util.Locale;
+import java.util.ResourceBundle;
 
 /**
  *
@@ -21,9 +23,7 @@ import java.util.List;
 @SpringBootApplication
 public class Main extends Application {
 	String TITULO = "HeinekenSD Helper";
-
 	private static Stage pStage;
-
 	GerenciadorStage iniciador;
 
 	@Override

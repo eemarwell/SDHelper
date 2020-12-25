@@ -4,6 +4,7 @@ package com.marwell.sdhelper.model.types;
  *
  * @author Eduardo Marwell
  */
+
 public enum ClipboardEnum {
     //Chat
     SESSAOABERTA(
