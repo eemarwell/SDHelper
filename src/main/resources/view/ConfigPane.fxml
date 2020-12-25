@@ -15,7 +15,7 @@
          <content>
             <TabPane prefHeight="200.0" prefWidth="321.0" tabClosingPolicy="UNAVAILABLE">
               <tabs>
-                <Tab text="Agentes">
+                <Tab text="Agente">
                   <content>
                     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
                   </content>

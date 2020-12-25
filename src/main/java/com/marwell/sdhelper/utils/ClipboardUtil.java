@@ -10,6 +10,7 @@ import javafx.scene.input.ClipboardContent;
  *
  * @author Eduardo Marwell
  */
+
 public class ClipboardUtil {
     private static int threadsAtivas = 0;
     
@@ -24,7 +25,7 @@ public class ClipboardUtil {
     
     public static boolean copiaBotao(Button button, Long waitTime, String originalText) {
         if (threadsAtivas > 0) {
-            button.setText("AGUARDE");
+            button.setText(new I18n().getWord("aguarde"));
             button.setDisable(true);
             Task<Void> timer = new Task<Void>() {
                 @Override
@@ -44,7 +45,7 @@ public class ClipboardUtil {
             return false;
         } else {
             threadsAtivas = 1;
-            button.setText("COPIADO");
+            button.setText(new I18n().getWord("copiado"));
             button.setDisable(true);
             Task<Void> timer = new Task<Void>() {
                 @Override
